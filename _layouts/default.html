@@ -4,8 +4,12 @@
     {% include header.html %}
   </head>
   <body>
-    <main id="content" role="main">
+    {% if page.layout == "privacy" %}
       {{ content }}
-    </main>
+    {% else %}
+      <main id="content" role="main">
+        {{ content }}
+      </main>
+    {% endif %}
   </body>
 </html>
